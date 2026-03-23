@@ -82,11 +82,11 @@ trip_agent = Agent(
         "When asked about weather or packing, call the get_weather_forecast tool."
         "Make sure you have access to real-time weather data to make your recommendations."
     ),
-    model="gpt-5",
+    model="gpt-4.1",
     tools=[get_weather_forecast]
 )
 
-city = "Atlanta"
+city = "Key West, FL"
 
 result = Runner.run_sync(trip_agent, f"""Headed to {city} today. What weather should I expect and 
                                          what is the exact temperature right now? 
